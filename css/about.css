@@ -1,0 +1,127 @@
+*,::before,::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{text-decoration: none;}
+img{vertical-align: bottom;}
+:disabled {cursor: not-allowed;}
+iframe{border: none;}
+button{cursor: pointer;}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+.clear{clear: both;}
+.row{margin: 0 -15px;}
+.row:after{
+    content: ""; clear: both; display: block;
+}
+
+ul li{
+    list-style: none;
+    padding: 12px ;
+}
+
+
+.row .col-1{flex-basis:8.33%;}
+.row .col-2{flex-basis:16.66%;}
+.row .col-3{flex-basis:25%;}
+.row .col-4{flex-basis:33.33%;}
+.row .col-5{flex-basis:41.66%;}
+.row .col-6{flex-basis:50%;}
+.row .col-7{flex-basis:58.33%;}
+.row .col-8{flex-basis:66.66%;}
+.row .col-9{flex-basis:75%;}
+.row .col-10{flex-basis:83.33%;}
+.row .col-11{flex-basis:91.66%;}
+.row .col-12{flex-basis:100%;}
+
+
+.row{margin: 0 -15px;
+display: flex;
+flex-flow: row;
+}
+
+button{
+    text-transform: capitalize;
+}
+
+body{
+    text-transform: capitalize;
+}
+
+img{ transition: transform .4s; }
+img:hover{ transform: scale(1.1); }
+
+.row[class^="col"]{
+    flex: 1 1 auto;
+    padding: 0 15px;
+    }
+
+    @font-face{
+        font-family: pl;
+        src: url(../font/poppins-light-webfont.woff2);
+    }
+    
+    @font-face{
+        font-family: pm;
+        src: url(../font/poppins-medium-webfont.woff2);
+    }
+    
+    @font-face{
+        font-family: pr;
+        src: url(../font/poppins-regular-webfont.woff2);
+    }
+    
+    @font-face{
+        font-family: pb;
+        src: url(../font/poppins-bold-webfont.woff2);
+    }
+    @font-face{
+        font-family: psb;
+        src: url(../font/poppins-semibold-webfont.woff2);
+    }
+    
+
+.pl{ font-family: rl, sans-serif; }
+.pb{ font-family: rb, sans-serif; }
+.pm{ font-family: rm, sans-serif; }
+.pr{ font-family: rr, sans-serif; }
+.psb{ font-family: rbl, sans-serif; }
+
+
+
+/* Layout */
+
+.home{ background: url(../img/cc1.jpg) no-repeat center top/cover; position: relative; padding-bottom: 155px;  }
+.home h1 { padding: 1rem 0; }
+.home h1 a{ text-decoration: none; color: #000; font-size: 1.25rem; position: sticky; top: 2rem; }
+.home nav ul{ display: flex; justify-content: space-between; padding: 1.3rem 0; }
+.home nav ul li a{ color: #000; font-size: 1.06rem; text-decoration: none; }
+.home nav ul li a:hover{color: #333;} 
+.home nav ul li a::after{content: ''; display: block; height: 0.20em; width: 0; background: #f34; transition: all 0.5s;}
+.home nav ul li a:hover::after{width: 100%;}
+
+.footer{  margin-top: 10rem; background: #363636; color: #fff; position: relative; }
+.footer span{  font-size: 2rem; position: relative; top: 35px;}
+.footer img{  width: 20%; margin-top: 3rem; }
+.footer p{ display: inline; position: absolute; top: 67px; }
+.footer i{ position: relative; top: 49%; left: -2%; }
+/* .footer h2{ text-align: center; margin-top: 4rem; } */
+.fooetr .wrapper { /* height: 100vh; */ position: realtive; }
+.footer .fas.fa-envelope { color: #fff; font-size: 2rem; background: #333; padding: 1rem; border-radius: 100%; margin: 0 0 1rem 0; }
+.footer .card-content { width: 35rem; height: 22rem; background-color: #fff; position: relative; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 1rem; padding: 4rem .5rem; box-shadow: 1px 1px 2rem rgba(0,0,0,.3); text-align: center; }
+.footer .card-content h2 { text-transform: uppercase; margin: 0 0 1rem 0; position: absolute; top: 40%; left: 33%; color: #000; }
+.footer .card-content p { font-size: .8rem; margin: 0 0 2rem 0; position: absolute; top: 52%; left: 15%; color: #000; font-size: 18px; }
+.footer input {  padding: .4rem 1rem; width: 50%; position: absolute; top: 70%; left: 15%; border-radius: 12px 0; outline: none; border: .1rem solid #d1d1d1; font-size: .7rem; }
+.footer ::placeholder { color: #d1d1d1; }
+.footer .subscribe-btn { /* padding: .6rem 1rem; */ width: 100px; height: 35px; border-radius: 0 12px; background: linear-gradient(90deg, #ff9966, #ff5e62); color: #fff; font-size: .7rem; border: none; outline: none; cursor: pointer; position: absolute; left: 66%; top: 70%; font-size: 16px; }
+.footer .subscribe-btn:hover{ width: 120px; color: #F2F2F2; background: #F54; border-radius: 12px 0; }
+.footer h3{ display: flex; justify-content: center; align-items: center; margin-top: 7rem;}
+.footer b{ color: #fff; font-weight: 100; display: flex; align-items: center; justify-content: center; }
+.footer a{ text-align: center; color: #fff; position: relative; left: 620px; }
+
+.top{ padding: 0 2px; position: fixed; right: 10px; bottom: 10px; background: #000; display: none; color: #fff;}
+.btn{ width: 45px; height: 35px; border: 2px solid; color: #ba2727;  background: #000;  font-size: 16px; border-radius: 10px; margin-top: 23px; }

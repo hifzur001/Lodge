@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 Lodge Jewellery Brand</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="icon" href="./img/cc2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <h1><a href="#" class="pb">lodge</a></h1>
+                </div>
+                <div class="col-5"></div>
+                <div class="col-6">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="pm">HOME</a></li>
+                            <li><a href="about.html" target="_blank" class="pm">ABOUT</a></li>
+                            <li><a href="" class="pm">JEWELLERY</a></li>
+                            <li><a href="#" class="pm">CONTACT US</a></li>
+                            <li><a href="#" class="pm">LOGIN</a></li>
+                            <li><a href="#" class="pm"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="#" class="pm"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 monster">
+                    <h2 class="pr hide" aria-label="false" contenteditable="true"> new&nbsp;<span class="pr hide">
+                            collection......</span></h2>
+                    <strong class="pb">JEWELLERY</strong>
+                    <p class="pr hide">stunning wedding jewellery crafted to celebrate the glory of every indian bride.
+                        our
+                        jewellery
+                        has the power to be the one little things that makes you feel unique.</p>
+                    <button class="pm" id="btn">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <figure>
+                        <img src="./img/cc15.png" alt="Gold Ring"><span class="pr"> LODGE</span>
+                    </figure>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-location-arrow"></i>
+                    <p class="pr"> address</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-phone-square"></i>
+                    <p class="pr"> +012 34567890</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-envelope"></i>
+                    <p class="pr"> you@domain.com</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="wrapper">
+                    <form action="#" class="card-content">
+                        <div class="container">
+                            <div class="image">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h2 class="psb">Subscribe</h2>
+                            <p>Subscribe to our newsletter and stay updated.</p>
+                        </div>
+                        <div class="form-input">
+                            <label>email</label>
+                            <input type="email" placeholder="Your Email" required="">
+                            <button class="subscribe-btn">Subscribe</button>
+                        </div>
+                    </form>
+                    <h3 class="pm">FOLLOW US</h3>
+                    <b class="pr">&copy; 2022 all right reserved by Lodge</b>
+                    <a href="index.html" aria-label="false" class="pm" style="text-decoration: none;">lodge</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn top">Top</button>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <script>
+
+        "use strict";
+
+        $(function () {  // $(document).ready shorthand
+            $('.monster').fadeIn('slow');
+        });
+
+        $(document).ready(function () {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function () {
+
+                /* Check the location of each desired element */
+                $('.hide').each(function (i) {
+
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({ 'opacity': '1' }, 1500);
+
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) {
+                    $('#toTopBtn').fadeIn();
+                } else {
+                    $('#toTopBtn').fadeOut();
+                }
+            });
+
+            $('#toTopBtn').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1000);
+                return false;
+            });
+        });
+
+        $(function () {
+            var myChars = '319',
+                paragraph = 'The diplomatic corps may, in certain contexts, refer to the collection of accredited heads of mission (ambassadors, high commissioners, and others) who represent their countries in another state or country. As a body, they usually only assemble to attend state functions like a coronation, inauguration, national day or State Opening of Parliament, depending on local custom. They may also assemble in the royal or presidential palace to give their own head of state New Year greeting to the head of state of the country in which they are based.',
+                paragraphLength = paragraph.length,
+                seeMore = 'See More',
+                seeLess = 'See Less';
+            if (paragraphLength > myChars) {
+                var c = paragraph.substr(0, myChars),
+                    h = paragraph.substr(myChars, paragraphLength - myChars),
+                    html = c + '<span class="hidden">' + h + '</span><span class="toggleShow">' + seeMore + '</span>';
+                $('.item02 p').html(html);
+                $('.toggleShow').click(function () {
+                    var hidden = $('.hidden, .item02 .gardient'),
+                        $el = $('.toggleShow');
+                    hidden.toggle();
+                    if (!$el.hasClass('shapped')) {
+                        $el.text(seeLess).addClass('shapped');
+
+                    } else {
+                        $el.text(seeMore).removeClass('shapped');
+
+                    }
+                });
+            }
+        });
+
+        var pics = document.getElementById("pics");
+
+        var height,
+            half;
+
+        window.addEventListener("resize", adjustHeightVars);
+        window.addEventListener("scroll", fadeBox);
+
+        function fadeBox() {
+            var x = pics.offsetTop - half;
+            var y = window.pageYOffset;
+            if (y >= x) {
+                $(".pic").addClass("fadein");
+            }
+        }
+
+        function adjustHeightVars() {
+            height = window.innerHeight;
+            half = height * 0.35;
+        }
+
+        adjustHeightVars();
+
+        $(function () {
+
+
+            $(".top").click(function () {
+                $("html,body").animate({
+                    "scrollTop": 0
+                })
+            });
+
+
+            // scroll    
+
+            var ts = $("body").height() - $(window).height();
+
+            $(window).scroll(function () {
+                var top = $(this).scrollTop();
+
+
+                if (top >= ts / 2) {
+                    $(".top").fadeIn()
+                }
+                else {
+                    $(".top").fadeOut()
+                }
+
+                // 
+
+                if (top >= $("#contact").offset().top - 85) {
+                    $(".wrap-1 nav ul li a").removeClass("active");
+                    $(".wrap-1 nav ul li:nth-child(5) a").addClass("active");
+                }
+                else if (top >= $("#about").offset().top - 85) {
+                    $(".wrap-1 nav ul li a").removeClass("active");
+                    $(".wrap-1 nav ul li:nth-child(4) a").addClass("active");
+                }
+                else if (top >= $("#portfolio").offset().top - 85) {
+                    $(".wrap-1 nav ul li a").removeClass("active");
+                    $(".wrap-1 nav ul li:nth-child(3) a").addClass("active");
+                }
+                else if (top >= $("#services").offset().top - 85) {
+                    $(".wrap-1 nav ul li a").removeClass("active");
+                    $(".wrap-1 nav ul li:nth-child(2) a").addClass("active");
+                }
+                else {
+                    $(".wrap-1 nav ul li a").removeClass("active");
+                    $(".wrap-1 nav ul li:nth-child(1) a").addClass("active");
+                }
+
+            });
+
+            /*  mobile menu */
+            $(".btn-mob").click(function () {
+                $(".collapse").slideToggle();
+                $(this).toggleClass("active");
+            })
+        });
+    </script>
+</body>
+
+</html>
